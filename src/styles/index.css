@@ -1,0 +1,43 @@
+/* Basic styles for css editing */
+:root {
+  --bg-color: #f8f0e5;
+  --primary-color: #eadbc8;
+  --secondary-color: #102c57;
+  --red: #f87171;
+  --green: #86efac;
+  --neutral-50: #fafafa;
+  --neutral-300: #d4d4d4;
+  --neutral-500: #737373;
+  --neutral-800: #262626;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  line-height: normal;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: var(--neutral-50);
+}
+.header {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+}

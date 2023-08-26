@@ -1,4 +1,4 @@
-import './TodoSearch.css';
+import './styles/TodoSearch.css';
 
 function TodoSearch() {
   return (
