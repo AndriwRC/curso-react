@@ -1,0 +1,24 @@
+.counter__description {
+  color: var(--neutral-50, #fafafa);
+  /* Text/Regular */
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.counter__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 20px 0;
+}
+.counter__container span {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+.counter__container span:nth-child(1) {
+  color: var(--green, #86efac);
+}
+.counter__container span:nth-child(2) {
+  color: var(--neutral-50, #fafafa);
+}
