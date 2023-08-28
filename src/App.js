@@ -30,7 +30,9 @@ function App() {
         ))}
       </TodoList>
 
-      <CreateTodoBtn />
+      <nav class="tab-bar">
+        <CreateTodoBtn />
+      </nav>
     </>
   );
 }
