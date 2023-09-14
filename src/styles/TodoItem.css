@@ -1,4 +1,4 @@
-.item__container {
+.todo-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,9 +11,27 @@
   border: 1px solid var(--neutral-500, #737373);
   box-shadow: 0px 0px 16px 4px rgba(16, 44, 87, 0.25);
 }
+.todo-item--completed {
+  text-decoration: line-through;
+  color: var(--neutral-500);
+  background-color: var(--neutral-300);
+  box-shadow: none;
+}
 .item__text {
   font-size: 1.6rem;
   font-weight: 400;
   text-align: start;
   flex-grow: 1;
+}
+.item__complete-icon {
+  fill: none;
+  stroke: var(--neutral-400);
+}
+.item__complete-icon:hover {
+  fill: var(--green);
+  stroke: none;
+}
+.item__complete-icon--completed {
+  fill: var(--neutral-400);
+  stroke: none;
 }
