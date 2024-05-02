@@ -30,8 +30,12 @@
 .item__complete-icon:hover {
   fill: var(--green);
   stroke: none;
+  cursor: pointer;
 }
 .item__complete-icon--completed {
   fill: var(--neutral-400);
   stroke: none;
+}
+.item__delete-icon:hover {
+  cursor: pointer;
 }
