@@ -1,10 +1,13 @@
 import './styles/TodoCounter.css';
 
 function TodoCounter({ total, completed }) {
+  const todosRemaining = total - completed;
   return (
     <>
       <p className="counter__description">
-        Has completado {completed} de {total} TODOs.
+        {todosRemaining
+          ? `Has completado ${completed} de ${total} TODOs.`
+          : 'Has completado todos los TODOs.'}
       </p>
       <div className="counter__container">
         <span className="completed">
@@ -31,7 +34,7 @@ function TodoCounter({ total, completed }) {
           </svg>
         </span>
         <span className="pending">
-          {total - completed}
+          {todosRemaining}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
