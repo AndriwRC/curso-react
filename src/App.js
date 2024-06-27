@@ -6,11 +6,11 @@ import { TodoItem } from './TodoItem';
 import { CreateTodoBtn } from './CreateTodoBtn';
 
 const defaultTodos = [
-  { text: 'Cortar cebolla', completed: true },
+  { text: 'Cortar cebolla', completed: false },
   { text: 'Tomar el curso de Intro a React', completed: false },
-  { text: 'Llorar con la llorona', completed: true },
-  { text: 'Voltear arroz', completed: true },
-  { text: 'Usar estados derivados', completed: true },
+  { text: 'Llorar con la llorona', completed: false },
+  { text: 'Voltear arroz', completed: false },
+  { text: 'Usar estados derivados', completed: false },
 ];
 
 function App() {
@@ -24,6 +24,14 @@ function App() {
       .toLocaleLowerCase()
       .includes(searchValue.toLocaleLowerCase().trim())
   );
+
+  // Update & Delete
+  const completeTodo = (text) => {
+    const newTodos = [...todos];
+    const todoIndex = newTodos.findIndex((todo) => todo.text === text);
+    newTodos[todoIndex].completed = true;
+    setTodos(newTodos);
+  };
 
   return (
     <>
@@ -39,6 +47,7 @@ function App() {
             key={todo.text}
             text={todo.text}
             completed={todo.completed}
+            onComplete={() => completeTodo(todo.text)}
           />
         ))}
       </TodoList>

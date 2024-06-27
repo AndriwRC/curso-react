@@ -1,6 +1,6 @@
 import './styles/TodoItem.css';
 
-function TodoItem({ text, completed }) {
+function TodoItem({ text, completed, onComplete }) {
   const icon = completed ? (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -35,6 +35,7 @@ function TodoItem({ text, completed }) {
         className={
           completed ? 'item__complete-icon--completed' : 'item__complete-icon'
         }
+        onClick={onComplete}
       >
         {icon}
       </span>
