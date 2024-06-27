@@ -1,6 +1,6 @@
 import './styles/TodoItem.css';
 
-function TodoItem({ text, completed, onComplete }) {
+function TodoItem({ text, completed, onComplete, onDelete }) {
   const icon = completed ? (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,7 @@ function TodoItem({ text, completed, onComplete }) {
         {icon}
       </span>
       <p className="item__text">{text}</p>
-      <span className="item__delete-icon">
+      <span className="item__delete-icon" onClick={onDelete}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
