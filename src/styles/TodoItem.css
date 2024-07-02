@@ -36,6 +36,10 @@
   fill: var(--neutral-400);
   stroke: none;
 }
+.item__delete-icon {
+  fill: var(--neutral-400);
+  stroke: none;
+}
 .item__delete-icon:hover {
   cursor: pointer;
 }
