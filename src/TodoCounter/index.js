@@ -1,4 +1,4 @@
-import './styles/TodoCounter.css';
+import './TodoCounter.css';
 
 function TodoCounter({ total, completed }) {
   const todosRemaining = total - completed;
