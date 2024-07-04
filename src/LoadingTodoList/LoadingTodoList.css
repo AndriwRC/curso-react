@@ -1,0 +1,35 @@
+@keyframes beatingNeutral {
+  0%,
+  100% {
+    background-color: var(--neutral-300);
+  }
+
+  50% {
+    background-color: var(--neutral-500);
+  }
+}
+
+.animate__beating-neutral {
+  animation: beatingNeutral 2s linear infinite;
+}
+
+.todo-item--loading {
+  border: none;
+}
+.todo-item--loading:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.todo-item--loading:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.item-loading__icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  animation-delay: 0.5s;
+}
+.item__text--loading {
+  height: 36px;
+  border-radius: 8px;
+  animation-delay: 0.5s;
+}
