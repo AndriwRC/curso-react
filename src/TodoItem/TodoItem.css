@@ -10,6 +10,7 @@
   border-radius: 16px;
   border: 1px solid var(--neutral-500, #737373);
   box-shadow: 0px 0px 16px 4px rgba(16, 44, 87, 0.25);
+  transition: all 0.5s;
 }
 .todo-item--completed {
   text-decoration: line-through;
@@ -28,13 +29,14 @@
   flex-grow: 1;
 }
 .item__complete-icon {
-  fill: none;
+  fill: transparent;
   stroke: var(--neutral-400);
 }
 .item__complete-icon:hover {
   fill: var(--green);
-  stroke: none;
+  stroke: transparent;
   cursor: pointer;
+  transition: all 0.2s;
 }
 .item__complete-icon--completed {
   fill: var(--neutral-400);
@@ -46,4 +48,6 @@
 }
 .item__delete-icon:hover {
   cursor: pointer;
+  fill: var(--neutral-500);
+  transition: fill 0.2s;
 }
