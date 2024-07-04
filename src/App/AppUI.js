@@ -3,7 +3,7 @@ import { TodoSearch } from '../TodoSearch';
 import { TodoList } from '../TodoList';
 import { TodoItem } from '../TodoItem';
 import { CreateTodoBtn } from '../CreateTodoBtn';
-import { LoadingTodoList } from '../LoadingTodoList';
+import { LoadingTodoItem } from '../LoadingTodoItem';
 import { ErrorAlert } from '../ErrorAlert';
 import { EmptyTodoList } from '../EmptyTodoList';
 
@@ -27,7 +27,13 @@ function AppUI({
       </header>
 
       <TodoList>
-        {loading && <LoadingTodoList />}
+        {loading && (
+          <>
+            <LoadingTodoItem />
+            <LoadingTodoItem />
+            <LoadingTodoItem />
+          </>
+        )}
         {error && <ErrorAlert message={'Ocurrió un error'} />}
         {!loading && searchedTodos.length === 0 && <EmptyTodoList />}
 
