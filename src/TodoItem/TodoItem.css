@@ -17,6 +17,10 @@
   background-color: var(--neutral-300);
   box-shadow: none;
 }
+.todo-item svg {
+  width: 24px;
+  height: 24px;
+}
 .item__text {
   font-size: 1.6rem;
   font-weight: 400;

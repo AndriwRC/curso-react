@@ -7,7 +7,7 @@
   overflow: hidden;
   width: calc(100% - 32px);
   max-width: 480px;
-  min-height: 240px;
+  min-height: 50vh;
   margin: 32px 16px 0;
   padding: 16px;
   padding-top: 80px;

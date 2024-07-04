@@ -1,0 +1,30 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.empty-list__title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--neutral-800);
+}
+
+.empty-list__icon {
+  margin: 0 auto;
+  width: 60%;
+  fill: none;
+  stroke: var(--secondary-color);
+  rotate: 0;
+
+  animation: spin 1s;
+}
+.empty-list__icon:hover {
+  rotate: 360deg;
+
+  transition: rotate 1s;
+}
