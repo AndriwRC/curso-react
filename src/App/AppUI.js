@@ -1,3 +1,4 @@
+import React from 'react';
 import { TodoCounter } from '../TodoCounter';
 import { TodoSearch } from '../TodoSearch';
 import { TodoList } from '../TodoList';
@@ -6,24 +7,18 @@ import { CreateTodoBtn } from '../CreateTodoBtn';
 import { LoadingTodoItem } from '../LoadingTodoItem';
 import { ErrorAlert } from '../ErrorAlert';
 import { EmptyTodoList } from '../EmptyTodoList';
+import { TodoContext } from '../Context';
 
-function AppUI({
-  loading,
-  error,
-  completedTodos,
-  totalTodos,
-  searchValue,
-  setSearchValue,
-  searchedTodos,
-  completeTodo,
-  deleteTodo,
-}) {
+function AppUI() {
+  const { loading, error, searchedTodos, completeTodo, deleteTodo } =
+    React.useContext(TodoContext);
+
   return (
     <>
       <header className="header">
         <h1>Hola, Andriw!</h1>
-        <TodoCounter completed={completedTodos} total={totalTodos} />
-        <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
+        <TodoCounter />
+        <TodoSearch />
       </header>
 
       <TodoList>

@@ -1,17 +1,21 @@
+import React from 'react';
 import './TodoCounter.css';
+import { TodoContext } from '../Context';
 
-function TodoCounter({ total, completed }) {
-  const todosRemaining = total - completed;
+function TodoCounter() {
+  const { completedTodos, totalTodos } = React.useContext(TodoContext);
+
+  const todosRemaining = totalTodos - completedTodos;
   return (
     <>
       <p className="counter__description">
         {todosRemaining
-          ? `Has completado ${completed} de ${total} TODOs.`
+          ? `Has completado ${completedTodos} de ${totalTodos} TODOs.`
           : 'Has completado todos los TODOs.'}
       </p>
       <div className="counter__container">
-        <span className="completed">
-          {completed}
+        <span className="completedTodos">
+          {completedTodos}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
