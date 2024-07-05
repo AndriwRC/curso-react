@@ -4,6 +4,8 @@ import { useLocalStorage } from './useLocalStorage';
 const TodoContext = React.createContext();
 
 function TodoProvider({ children }) {
+  const [openModal, setOpenModal] = React.useState(true);
+
   const {
     item: todos,
     saveItem: saveTodos,
@@ -46,6 +48,8 @@ function TodoProvider({ children }) {
         searchedTodos,
         completeTodo,
         deleteTodo,
+        openModal,
+        setOpenModal,
       }}
     >
       {children}

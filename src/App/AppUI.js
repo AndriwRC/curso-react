@@ -7,11 +7,19 @@ import { CreateTodoBtn } from '../CreateTodoBtn';
 import { LoadingTodoItem } from '../LoadingTodoItem';
 import { ErrorAlert } from '../ErrorAlert';
 import { EmptyTodoList } from '../EmptyTodoList';
+import { Modal } from '../Modal';
 import { TodoContext } from '../Context';
 
 function AppUI() {
-  const { loading, error, searchedTodos, completeTodo, deleteTodo } =
-    React.useContext(TodoContext);
+  const {
+    loading,
+    error,
+    searchedTodos,
+    completeTodo,
+    deleteTodo,
+    openModal,
+    setOpenModal,
+  } = React.useContext(TodoContext);
 
   return (
     <>
@@ -46,6 +54,7 @@ function AppUI() {
       <nav className="tab-bar">
         <CreateTodoBtn />
       </nav>
+      {openModal && <Modal>Add TODO</Modal>}
     </>
   );
 }
