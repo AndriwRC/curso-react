@@ -1,0 +1,101 @@
+.new-todo-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 768px;
+  height: 100%;
+  padding-bottom: 24px;
+  border-radius: 16px;
+  background-color: var(--bg-color);
+  box-shadow: 0 4px 32px rgba(248, 240, 229, 0.4);
+}
+.new-todo__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  line-height: 2.8rem;
+  font-size: 2rem;
+  font-weight: 600;
+  border-radius: 16px 16px 0 0;
+
+  color: var(--bg-color);
+  background: var(--secondary-color);
+}
+.new-todo__label span {
+  fill: var(--bg-color);
+  height: 24px;
+}
+.new-todo__text {
+  flex-grow: 1;
+  width: 85%;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid var(--neutral-300);
+  outline: var(--secondary-color);
+
+  background: var(--bg, #f8f0e5);
+  transition: all 0.2s;
+}
+.new-todo__text:focus-visible {
+  border-color: var(--neutral-400);
+  box-shadow: 0px 0px 16px 4px rgba(16, 44, 87, 0.25);
+}
+.new-todo__btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.new-todo__btn {
+  width: 100%;
+  max-width: 180px;
+  padding: 16px 24px;
+  border-radius: 16px;
+  border: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.new-todo__btn:hover {
+  cursor: pointer;
+}
+.new-todo__btn:active {
+  background-color: var(--bg-color);
+}
+
+.new-todo__btn--add {
+  background-color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  box-shadow: 0px 0px 8px rgba(16, 44, 87, 0.25);
+  color: var(--neutral-50);
+}
+.new-todo__btn--add:hover {
+  background-color: rgba(16, 44, 87, 0.75);
+}
+.new-todo__btn--cancel {
+  background-color: var(--primary-color);
+  border: 1px solid var(--neutral-500);
+  color: var(--secondary-color);
+}
+.new-todo__btn--cancel:hover {
+  border-color: var(--secondary-color);
+  box-shadow: 0px 0px 8px rgba(16, 44, 87, 0.25);
+  background-color: var(--bg-color);
+}
+
+@media (min-width: 768px) {
+  .new-todo__label {
+    width: fit-content;
+    border-radius: 0px 0px 16px 16px;
+  }
+}

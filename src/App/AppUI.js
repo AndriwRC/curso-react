@@ -8,6 +8,7 @@ import { LoadingTodoItem } from '../LoadingTodoItem';
 import { ErrorAlert } from '../ErrorAlert';
 import { EmptyTodoList } from '../EmptyTodoList';
 import { Modal } from '../Modal';
+import { TodoForm } from '../TodoForm';
 import { TodoContext } from '../Context';
 
 function AppUI() {
@@ -54,7 +55,11 @@ function AppUI() {
       <nav className="tab-bar">
         <CreateTodoBtn setOpenModal={setOpenModal} />
       </nav>
-      {openModal && <Modal>Add TODO</Modal>}
+      {openModal && (
+        <Modal>
+          <TodoForm />
+        </Modal>
+      )}
     </>
   );
 }
