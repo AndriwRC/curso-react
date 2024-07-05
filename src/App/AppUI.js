@@ -52,7 +52,7 @@ function AppUI() {
       </TodoList>
 
       <nav className="tab-bar">
-        <CreateTodoBtn />
+        <CreateTodoBtn setOpenModal={setOpenModal} />
       </nav>
       {openModal && <Modal>Add TODO</Modal>}
     </>

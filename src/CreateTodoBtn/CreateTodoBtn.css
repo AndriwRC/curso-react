@@ -1,0 +1,11 @@
+.create-todo-btn {
+  width: 48px;
+  height: 48px;
+  fill: var(--bg-color);
+  transition: all 0.2s;
+}
+.create-todo-btn:hover {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}

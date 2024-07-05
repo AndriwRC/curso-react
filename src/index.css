@@ -55,9 +55,6 @@ h1 {
   height: 80px;
   background: var(--secondary, #102c57);
 }
-.tab-bar > svg:hover {
-  cursor: pointer;
-}
 
 @media (min-width: 768px) {
   .header {
