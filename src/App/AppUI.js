@@ -15,6 +15,7 @@ function AppUI() {
   const {
     loading,
     error,
+    searchValue,
     searchedTodos,
     completeTodo,
     deleteTodo,
@@ -39,7 +40,9 @@ function AppUI() {
           </>
         )}
         {error && <ErrorAlert message={'Ocurrió un error'} />}
-        {!loading && searchedTodos.length === 0 && <EmptyTodoList />}
+        {!loading && !searchValue && searchedTodos.length === 0 && (
+          <EmptyTodoList />
+        )}
 
         {searchedTodos.map((todo) => (
           <TodoItem
